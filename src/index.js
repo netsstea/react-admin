@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, HashRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import { createBrowserHistory } from 'history';
+import registerServiceWorker from './registerServiceWorker';
 
 // Layouts
 import Full from './layouts/Full/'
@@ -22,4 +23,5 @@ ReactDOM.render((
       <Route path="/" name="Home" component={Full}/>
     </Switch>
   </BrowserRouter>
-), document.getElementById('root'))
+), document.getElementById('root'));
+registerServiceWorker();
